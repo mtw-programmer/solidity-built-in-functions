@@ -32,4 +32,9 @@ contract BuiltIn {
     function getGasFee() public view returns (uint) {
         return block.gaslimit;
     }
+
+    /// @return Blockhash of the block number
+    function getBlockHash() public view returns (bytes32) {
+        return blockhash(block.number);
+    }
 }
