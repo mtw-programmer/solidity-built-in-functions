@@ -13,4 +13,14 @@ contract BuiltIn {
   function getSentEther() public payable returns (uint) {
     return msg.value;
   }
+
+  /// @return Block difficulty
+  function getDifficulty() public view returns (uint) {
+    return block.prevrandao;
+  }
+
+  /// @return Block timestamp
+  function getTimestamp() public view returns (uint) {
+    return block.timestamp;
+  }
 }
